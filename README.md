@@ -28,3 +28,10 @@ Evaluate model performance across different diagnostic tasks (e.g., specific arr
 ## Expected Completion Time
 
 **Estimated time:** 40 hours
+
+## Additional Notes
+
+### Guideline
+- According to the source of the dataset, there are recommended stratified 10-folds, where the same patients are kept within the same folds. Moreover, 9th fold and 10th are of higher quality, which are recommeded to be used as validation set and test set.
+
+Cross-validation Folds: recommended 10-fold train-test splits (strat_fold) obtained via stratified sampling while respecting patient assignments, i.e. all records of a particular patient were assigned to the same fold. Records in fold 9 and 10 underwent at least one human evaluation and are therefore of a particularly high label quality. We therefore propose to use folds 1-8 as training set, fold 9 as validation set and fold 10 as test set.
